@@ -1,0 +1,33 @@
+<form (ngSubmit)="onSubmit()" #pizzaForm="ngForm">
+    <h1> Pizza store </h1>
+    Pizza Name
+    <select [(ngModel)]="pizzaName" name="pizzaName" required> 
+      <option value="Margarita 6">Margarita</option>
+      <option value="Cheezy 7">Cheezy</option>
+      <option value="Gambling 8">Gambling</option>
+    </select>
+    <br>
+    The Amount
+     <select [(ngModel)]="ammount" name="ammount" required>
+      <option value="1">1.</option>
+      <option value="2">2.</option>
+      <option value="3">3.</option>
+      <option value="4">4.</option>
+      <option value="5">5.</option>
+    </select>
+    <br>
+    Pizza Size 
+     <select [(ngModel)]="size" name="size" required>
+      <option value="Small 2">Small</option>
+      <option value="Medium 4">Medium</option>
+      <option value="Large 6">Large</option>
+    </select>
+    <br>
+    <!--email text field, for newz letter, not required-->
+    News letter <input [(ngModel)]="email" type="text" name="email">
+    <br>
+    <!--Coupon code here, for price cut off, not required-->
+    Coupon code <input [(ngModel)]="coupon" type="text" name="coupon">
+    <br>
+    <button  type="submit" class="btn btn-success" [disabled]="!pizzaForm.form.valid">Submit</button>
+   </form>

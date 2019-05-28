@@ -1,0 +1,19 @@
+
+<h1> Order receipt </h1>
+
+<p>  Pizza: {{receipt.pizzaName}}</p>
+<p>  Size: {{receipt.pizzaSize}}</p>
+<p>  Amount: {{receipt.pizzaAmmount}}</p>
+<p>  Total paid: {{receipt.totalPrice}} $</p>
+
+<h2> Extras </h2>
+<!-- Display that you sucefuly subbed to the news letter -->
+<p> News letter: {{receipt.newsLetterSub}} </p>
+<!-- Display the old price, new price, what you save -->
+<p> Coupon: {{receipt.couponRedeem}} </p>
+<ul>
+  <li>Old price: {{receipt.totalPrice}} $</li>
+  <li>New price: {{receipt.newPrice}} $</li>
+  <li>Discount:  {{receipt.couponDiscount}} %</li>
+</ul> 
+<p> {{extra}} <p>
